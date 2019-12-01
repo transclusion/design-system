@@ -1,0 +1,32 @@
+{
+  "name": "vue-web-ui",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@transclusion/css": "1.0.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.1.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

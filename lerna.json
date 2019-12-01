@@ -1,0 +1,6 @@
+{
+  "packages": ["css", "react-web-ui", "vue-web-ui"],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "independent"
+}

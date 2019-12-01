@@ -1,0 +1,46 @@
+{
+  "name": "@transclusion/react-web-ui",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "typings": "dist/es/index.d.ts",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:cjs": "tsc --project ./typescript/cjs-tsconfig.json",
+    "build:es": "tsc --project ./typescript/es-tsconfig.json",
+    "dev": "run-p dev:*",
+    "dev:playroom": "playroom start",
+    "dev:cjs": "tsc --watch --project ./typescript/cjs-tsconfig.json",
+    "dev:es": "tsc --watch --project ./typescript/es-tsconfig.json",
+    "format": "prettier-tslint fix 'src/**/*.{ts,tsx}'",
+    "lint": "tslint src/**/*.{ts,tsx}",
+    "prebuild": "rimraf dist",
+    "predev": "yarn build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@transclusion/css": "1.0.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/react": "16.8.24",
+    "@types/react-dom": "16.9.4",
+    "cssnano": "^4.1.10",
+    "jest": "^24.9.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.5",
+    "playroom": "0.10.0",
+    "postcss": "^7.0.23",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.19.1",
+    "prettier-tslint": "^0.4.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.7.2"
+  }
+}

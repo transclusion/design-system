@@ -1,0 +1,38 @@
+{
+  "name": "@transclusion/css",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "typings": "dist/es/index.d.ts",
+  "scripts": {
+    "build": "run-s build:js build:css",
+    "build:css": "node scripts/build.js",
+    "build:js": "run-p build:js:*",
+    "build:js:cjs": "tsc --project ./typescript/cjs-tsconfig.json",
+    "build:js:es": "tsc --project ./typescript/es-tsconfig.json",
+    "dev": "run-p dev:*",
+    "dev:cjs": "tsc --watch --project ./typescript/cjs-tsconfig.json",
+    "dev:es": "tsc --watch --project ./typescript/es-tsconfig.json",
+    "format": "prettier-tslint fix 'src/**/*.ts'",
+    "lint": "tslint src/**/*.ts",
+    "prebuild": "rimraf dist",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "cssnano": "^4.1.10",
+    "jest": "^24.9.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.23",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.19.1",
+    "prettier-tslint": "^0.4.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.7.2"
+  }
+}
